@@ -8,6 +8,11 @@
 
 import UIKit
 
+let BLACKCOLOR = UIColor.black
+let WHITECOLOR = UIColor.white
+let DANDELIONCOLOR = UIColor(red: 255/256, green: 212/256, blue: 100/256, alpha: 1)
+let FONT = UIFont(name: "Bodoni 72 Oldstyle", size: 27)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,7 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let navigationBarApperance = UINavigationBar.appearance()
+        
+        navigationBarApperance.barTintColor = BLACKCOLOR
+        navigationBarApperance.tintColor = DANDELIONCOLOR
+        navigationBarApperance.titleTextAttributes = [NSForegroundColorAttributeName:WHITECOLOR, NSFontAttributeName: FONT ?? UIFont.systemFont(ofSize: 27)]
+        
         return true
     }
 

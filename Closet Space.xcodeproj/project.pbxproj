@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5A9245B1F05A0EC007DC5E0 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9245A1F05A0EC007DC5E0 /* Type.swift */; };
+		F5CA27E11F0DE17100FE4F65 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CA27E01F0DE17100FE4F65 /* CatalogViewController.swift */; };
+		F5E33B711F073F5B00249019 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E33B701F073F5B00249019 /* ItemCell.swift */; };
 		F5F1EC391F054595007F646C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1EC381F054595007F646C /* AppDelegate.swift */; };
-		F5F1EC3B1F054595007F646C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1EC3A1F054595007F646C /* ViewController.swift */; };
+		F5F1EC3B1F054595007F646C /* BrandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1EC3A1F054595007F646C /* BrandsViewController.swift */; };
 		F5F1EC3E1F054595007F646C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F1EC3C1F054595007F646C /* Main.storyboard */; };
 		F5F1EC401F054595007F646C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F1EC3F1F054595007F646C /* Assets.xcassets */; };
 		F5F1EC431F054595007F646C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F1EC411F054595007F646C /* LaunchScreen.storyboard */; };
 		F5F1EC4E1F054595007F646C /* Closet_SpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1EC4D1F054595007F646C /* Closet_SpaceTests.swift */; };
+		F5F1EC5B1F054C45007F646C /* BrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1EC5A1F054C45007F646C /* BrandCell.swift */; };
+		F5F1EC601F05507E007F646C /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1EC5F1F05507E007F646C /* Brand.swift */; };
+		F5F1EC621F0550F5007F646C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1EC611F0550F5007F646C /* Item.swift */; };
+		F5F1EC641F055221007F646C /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1EC631F055221007F646C /* Gender.swift */; };
+		F5FFF7571F0C9C62004C7BF7 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FFF7561F0C9C62004C7BF7 /* FilterButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F5A9245A1F05A0EC007DC5E0 /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		F5CA27E01F0DE17100FE4F65 /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		F5E33B701F073F5B00249019 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		F5F1EC351F054595007F646C /* Closet Space.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Closet Space.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F1EC381F054595007F646C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5F1EC3A1F054595007F646C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5F1EC3A1F054595007F646C /* BrandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsViewController.swift; sourceTree = "<group>"; };
 		F5F1EC3D1F054595007F646C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5F1EC3F1F054595007F646C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5F1EC421F054595007F646C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +47,11 @@
 		F5F1EC491F054595007F646C /* Closet SpaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Closet SpaceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F1EC4D1F054595007F646C /* Closet_SpaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closet_SpaceTests.swift; sourceTree = "<group>"; };
 		F5F1EC4F1F054595007F646C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5F1EC5A1F054C45007F646C /* BrandCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandCell.swift; sourceTree = "<group>"; };
+		F5F1EC5F1F05507E007F646C /* Brand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		F5F1EC611F0550F5007F646C /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F5F1EC631F055221007F646C /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		F5FFF7561F0C9C62004C7BF7 /* FilterButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +93,10 @@
 		F5F1EC371F054595007F646C /* Closet Space */ = {
 			isa = PBXGroup;
 			children = (
+				F5F1EC5E1F05505A007F646C /* Controller */,
+				F5F1EC5D1F055053007F646C /* View */,
+				F5F1EC5C1F055045007F646C /* Model */,
 				F5F1EC381F054595007F646C /* AppDelegate.swift */,
-				F5F1EC3A1F054595007F646C /* ViewController.swift */,
 				F5F1EC3C1F054595007F646C /* Main.storyboard */,
 				F5F1EC3F1F054595007F646C /* Assets.xcassets */,
 				F5F1EC411F054595007F646C /* LaunchScreen.storyboard */,
@@ -94,6 +112,36 @@
 				F5F1EC4F1F054595007F646C /* Info.plist */,
 			);
 			path = "Closet SpaceTests";
+			sourceTree = "<group>";
+		};
+		F5F1EC5C1F055045007F646C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5F1EC5F1F05507E007F646C /* Brand.swift */,
+				F5F1EC611F0550F5007F646C /* Item.swift */,
+				F5F1EC631F055221007F646C /* Gender.swift */,
+				F5A9245A1F05A0EC007DC5E0 /* Type.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F5F1EC5D1F055053007F646C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F5F1EC5A1F054C45007F646C /* BrandCell.swift */,
+				F5E33B701F073F5B00249019 /* ItemCell.swift */,
+				F5FFF7561F0C9C62004C7BF7 /* FilterButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F5F1EC5E1F05505A007F646C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F5F1EC3A1F054595007F646C /* BrandsViewController.swift */,
+				F5CA27E01F0DE17100FE4F65 /* CatalogViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +249,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5F1EC3B1F054595007F646C /* ViewController.swift in Sources */,
+				F5CA27E11F0DE17100FE4F65 /* CatalogViewController.swift in Sources */,
+				F5F1EC641F055221007F646C /* Gender.swift in Sources */,
+				F5F1EC3B1F054595007F646C /* BrandsViewController.swift in Sources */,
+				F5E33B711F073F5B00249019 /* ItemCell.swift in Sources */,
+				F5F1EC601F05507E007F646C /* Brand.swift in Sources */,
+				F5F1EC621F0550F5007F646C /* Item.swift in Sources */,
 				F5F1EC391F054595007F646C /* AppDelegate.swift in Sources */,
+				F5FFF7571F0C9C62004C7BF7 /* FilterButton.swift in Sources */,
+				F5F1EC5B1F054C45007F646C /* BrandCell.swift in Sources */,
+				F5A9245B1F05A0EC007DC5E0 /* Type.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +468,7 @@
 				F5F1EC541F054595007F646C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5F1EC551F054595007F646C /* Build configuration list for PBXNativeTarget "Closet SpaceTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +477,7 @@
 				F5F1EC571F054595007F646C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
