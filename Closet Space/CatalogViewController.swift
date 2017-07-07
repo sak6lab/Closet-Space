@@ -6,7 +6,7 @@
 //  Copyright © 2017 Saketh D. All rights reserved.
 //
 
-//TO-DO: Section Insets, Filter, Enlarge Selection
+//TO-DO:Filter, Enlarge Selection
 
 import UIKit
 
@@ -18,6 +18,26 @@ final class CatalogViewController: UICollectionViewController {
     
     fileprivate let itemsPerRow:CGFloat = 3
     fileprivate let sectionInsets = UIEdgeInsets(top: 30, left: 20, bottom: 30, right: 20)
+    
+    var selectedItemIndexPath: IndexPath?{
+        didSet{
+            var indexPaths = [IndexPath]()
+            if let selectedItemIndexPath = selectedItemIndexPath{
+                indexPaths.append(selectedItemIndexPath)
+            }
+            if let oldValue = oldValue{
+                indexPaths.append(oldValue)
+            }
+            
+            collectionView?.performBatchUpdates({
+                self.collectionView?.reloadItems(at: indexPaths)
+            }) { completed in
+                if let selectedItemIndexPath = self.selectedItemIndexPath{
+                    self.collectionView?.scrollToItem(at: selectedItemIndexPath, at: .centeredVertically, animated: true)
+                }
+            }
+        }
+    }
 }
 
 //MARK: -CollectionViewDataSource
@@ -28,6 +48,11 @@ extension CatalogViewController{
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ItemCell
+        
+        if indexPath == selectedItemIndexPath {
+            cell.selectCell()
+        }
+        
         let item = brand.getItems()[indexPath.row]
         let price = String(format: "$%.02f", arguments: [item.getPrice()])
         cell.configureCell(image: item.getImage(), name: item.getName(), price: price, size: item.getSize())
@@ -38,6 +63,7 @@ extension CatalogViewController{
 //MARK: -CollectionViewDelegate
 extension CatalogViewController {
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        selectedItemIndexPath = selectedItemIndexPath == indexPath ? nil : indexPath
         return false
     }
     
@@ -49,6 +75,16 @@ extension CatalogViewController {
 //MARK: -CollectionViewFlowDelegate
 extension CatalogViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if indexPath == selectedItemIndexPath {
+            var size = collectionView.bounds.size
+            size.height -= topLayoutGuide.length
+            size.height -= (sectionInsets.top + sectionInsets.bottom)
+            size.height /= 3
+            size.width -= (sectionInsets.left + sectionInsets.right)
+            
+            return size
+        }
         
         let item = brand.getItems()[indexPath.row]
         
@@ -64,3 +100,4 @@ extension CatalogViewController: UICollectionViewDelegateFlowLayout{
         return sectionInsets
     }
 }
+
